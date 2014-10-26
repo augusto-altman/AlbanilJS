@@ -1,4 +1,9 @@
-/*File builded with ablanil.js - github repo link here*/
+/*-------------------------------------------------------
+File builded with AlbanilJS
+github: https://github.com/augusto-altman/AlbanilJS
+npm: - 
+-------------------------------------------------------*/
+
 var cuak = (function() {
     function ajaxGet() {
         console.log("GET!");

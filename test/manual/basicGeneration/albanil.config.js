@@ -1,7 +1,7 @@
 module.exports = function(albanil, args) {
 	albanil.build({
 		srcFolder: '.',
-		outFile: './cuak2.js',
+		outFile: './out.js',
 		object: {
 			name: 'cuak',
 			expositorModule: 'a'

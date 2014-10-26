@@ -40,7 +40,11 @@ module.exports.getRequireConfig = function(config) {
 				return contents;
 			},
 			out: function(text, sourceMapText) {
-				text = '\n/*File builded with ablanil.js - github repo link here*/\n' + text;
+				text = '\n/*-------------------------------------------------------\n' +
+					'File builded with AlbanilJS\n' +
+					'github: https://github.com/augusto-altman/AlbanilJS\n' +
+					'npm: - \n' +
+					'-------------------------------------------------------*/\n\n' + text;
 
 				fs.writeFileSync(
 					path.normalize(config.outFile),
