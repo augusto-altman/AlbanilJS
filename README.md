@@ -1,4 +1,4 @@
 AlbanilJS
 =========
 
-AlbanilJS is more than a smart concatenator, is a javascript builder. It allows you to modularize your javscript project using then RequireJS syntax and then to build a standalone vendor-free file from your modules.
+AlbanilJS is more than a smart concatenator, it is a javascript builder. With AlbanilJS you can modularize your javscript project using the RequireJS syntax and use these modules to build a unique standalone vendor-free javascript file (RequireJS independant).
