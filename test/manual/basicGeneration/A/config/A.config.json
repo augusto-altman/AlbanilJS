@@ -1,0 +1,15 @@
+{
+	"paths": {
+		"ajaxGet": "utils/ajaxGet",
+		"callXApi": "restCommunication/callXApi",
+		"callYApi": "restCommunication/callYApi",
+		"a_": "vars/a_"
+	},
+	"wrap": {
+		"start": ";(function(window, document, undefined){",
+		"end": "})(this, document);"
+	},
+	"modules": [
+		"callXApi"
+	]
+}

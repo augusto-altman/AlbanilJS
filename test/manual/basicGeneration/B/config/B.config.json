@@ -1,0 +1,13 @@
+{
+    "paths": {
+        "parser": "helpers/parser",
+        "internalB": "variables/internalB"
+    },
+    "wrap": {
+        "start": ";(function(window, document, undefined){",
+        "end": "})(this, document);"
+    },
+    "modules": [
+        "interpreter/execute"
+    ]
+}
