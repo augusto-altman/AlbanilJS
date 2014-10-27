@@ -31,6 +31,19 @@ Usage from the command line
 
 It is very easy to use. A typical setup will involve adding only one file to your project: _albanil.config.js_. As you can see it's valid javascript file so it's completely programable, but this js has another important responsibility which is to configure your AlbanilJS builds. 
 
+And a typical _albanil.config.js_ looks like:
+
+```JavaScript
+//receives the albanil builder and the command line arguments passed to the albanil command
+module.exports = function(albanil, args) { 
+	//Do whatever you want here
+    albanil.build({
+		//Configuration object.
+    });
+    //Do whatever you want here
+}
+```
+
 To build a javascript file you have to run the _albanil_ command from the directory in which is located your _albanil.config.js_ file. Is that easy!
 
 For example, supose that you have created the _albanil.config.js_ in the /a/b/c directory. Then you just should to do the following from a command line:
@@ -38,20 +51,6 @@ For example, supose that you have created the _albanil.config.js_ in the /a/b/c 
 ```shell
 $ cd /a/b/c
 $ albanil
-```
-
-And a typical albanil.config.js looks like:
-
-```JavaScript
-//Do whatever you want here
-module.exports = function(albanil, args) { //receives the albanil builder and the command line arguments passed to the albanil command
-	//Do whatever you want here
-    albanil.build({
-		//Configuration object.
-    });
-    //Do whatever you want here
-}
-//Do whatever you want here
 ```
 
 Usage from node
