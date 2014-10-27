@@ -60,7 +60,8 @@ Usage from node
 You can also require the albanil builder as a node module, and in the same manner as with the command line, you just need to pass the configuration to the builder, and that's all.
 
 ```JavaScript
-var albanilBuilder = require('albanil'),
+var albanilBuilder = require('albanil');
+
 albanilBuilder.build({
     //Configuration object. It's the same as the specified in the albanil.config.js files!
 })
@@ -82,3 +83,12 @@ Configuration object
 	]
 }
 ```
+
+License
+-------------
+Copyright (c) 2014 - 2014 Augusto Altman Quaranta <augusto.altman@gmail.com> and Matias Carraza <matiascarranza@gmail.com> et al Licensed under the MIT license.
+
+Contact us
+-------------
+
+**e-mail**: augusto.altman@gmail.com, matiascarranza@gmail.com
