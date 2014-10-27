@@ -1,17 +1,19 @@
 module.exports = (function() {
 	//------------ Internals --------------
+	var chalk = require('chalk');
+
 	var logs = {
 			warnings: {
 				msgs: [],
-				header: '------------- Warnings \n'
+				header: 'Warnings \n'
 			},
 			errors: {
 				msgs: [],
-				header: '------------- Errors \n'
+				header: 'Errors \n'
 			},
 			success: {
 				msgs: [],
-				header: '------------- Success \n'
+				header: 'Success \n'
 			}
 		},
 		codes = {
@@ -23,19 +25,19 @@ module.exports = (function() {
 
 			function() {
 				return logTextBuilder({
-					header: logs.errors.header,
+					header: chalk.red(logs.errors.header),
 					msgs: logs.errors.msgs
 				});
 			},
 			function() {
 				return logTextBuilder({
-					header: logs.warnings.header,
+					header: chalk.yellow(logs.warnings.header),
 					msgs: logs.warnings.msgs
 				});
 			},
 			function() {
 				return logTextBuilder({
-					header: logs.success.header,
+					header: chalk.green(logs.success.header),
 					msgs: logs.success.msgs
 				});
 			}
