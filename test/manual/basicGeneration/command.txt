@@ -1,1 +1,1 @@
-node ../../../src/albanil
+node ../../../dist/bin/albanil

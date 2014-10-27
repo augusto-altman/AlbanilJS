@@ -107,7 +107,7 @@ module.exports = (function() {
 			var procesedConfig = getValueOrdefault.callEach(config);
 			logger.unSet();
 			return procesedConfig;
-		}
+		};
 	})();
 
 	function isObject(obj) {
@@ -116,7 +116,7 @@ module.exports = (function() {
 
 	function isString(obj) {
 		var toString = Object.prototype.toString;
-		return !!obj && (toString.call(obj) == '[object String]');
+		return !!obj && (toString.call(obj) === '[object String]');
 	}
 
 	function forEach(obj, callback, ignore) {
@@ -130,11 +130,11 @@ module.exports = (function() {
 	}
 
 	function isValueInArray(array, value) {
-		return !!array && !!value && (array.indexOf(value) >= 0)
+		return !!array && !!value && (array.indexOf(value) >= 0);
 	}
 
 	function isArray(array) {
-		return !!array && Object.prototype.toString.call(array) === '[object Array]'
+		return !!array && Object.prototype.toString.call(array) === '[object Array]';
 	}
 
 	return {
@@ -144,5 +144,5 @@ module.exports = (function() {
 		forEach: forEach,
 		isArray: isArray,
 		arrayHasValue: isValueInArray
-	}
+	};
 })();

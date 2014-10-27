@@ -39,7 +39,7 @@ module.exports.getRequireConfig = function(config) {
 
 				return contents;
 			},
-			out: function(text, sourceMapText) {
+			out: function(text) {
 				text = '\n/*-------------------------------------------------------\n' +
 					'File builded with AlbanilJS\n' +
 					'github: https://github.com/augusto-altman/AlbanilJS\n' +
@@ -58,7 +58,7 @@ module.exports.getRequireConfig = function(config) {
 		rjsConfig.wrap = {
 			start: 'var ' + config.object.name + ' = (function() {',
 			end: 'return ' + config.object.expositorModule + ';\n}());'
-		}
+		};
 	}
 
 	return rjsConfig;

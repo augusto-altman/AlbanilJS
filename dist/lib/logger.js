@@ -103,6 +103,6 @@ module.exports = (function() {
 		getLogText: getLogText,
 		setErrorsHeader: setErrorsHeader,
 		setWarningsHeader: setWarningsHeader,
-		setSuccessHeader: setSuccessHeader,
-	}
+		setSuccessHeader: setSuccessHeader
+	};
 })();

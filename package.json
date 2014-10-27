@@ -7,7 +7,7 @@
 	"description": "Albanil is an object generator.",
 	"version": "0.0.1",
 	"repository": {
-		"url": ""
+		"url": "https://github.com/augusto-altman/AlbanilJS"
 	},
 	"contributors": [{
 		"name": "Matias Carranza",
@@ -29,7 +29,9 @@
 		"standalone",
 		"standalone generation",
 		"cutomization",
-		"build tool"
+		"build tool",
+		"concat",
+		"concatenation"
 	],
 	"main": "./dist/lib/albanil.js",
 	"bin": {

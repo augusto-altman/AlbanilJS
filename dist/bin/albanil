@@ -5,7 +5,7 @@
 process.title = 'albanil';
 
 var path = require('path'),
-    albanilBuilder = require('./builder'),
+    albanilBuilder = require('../lib/builder'),
     albanilConfig = require(path.resolve(process.cwd(), 'albanil.config.js'));
 
 albanilConfig(albanilBuilder, process.argv);
