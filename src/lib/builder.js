@@ -5,9 +5,9 @@ module.exports.build = function(config) {
 		requireConfig = null,
 		albanilConfig = null;
 
-	logger.setErrorsHeader('------- Configuration errors: \n');
-	logger.setWarningsHeader('------- Configuration warnings: \n');
-	logger.setSuccessHeader('------- Configuration successes: \n');
+	logger.setErrorsHeader('Errors: \n');
+	logger.setWarningsHeader('Warnings: \n');
+	logger.setSuccessHeader('Successes: \n');
 
 	console.log('\n\n>>>>>>>>>>>>>>>>>>> Reading configuration... \n');
 	albanilConfig = helpers.configurationHandler(config, logger);

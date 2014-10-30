@@ -38,8 +38,9 @@
 		"albanil": "./dist/bin/albanil"
 	},
 	"dependencies": {
-		"requirejs": "~2.1.4",
-		"js-beautify": "latest"
+		"chalk": "^0.5.1",
+		"js-beautify": "latest",
+		"requirejs": "~2.1.4"
 	},
 	"engines": {
 		"node": "*"
