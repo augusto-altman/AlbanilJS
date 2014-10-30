@@ -2,6 +2,7 @@ module.exports.build = function(config) {
 	var requirejs = require('requirejs'),
 		helpers = require('./helpers'),
 		logger = require('./logger'),
+		chalk = require('chalk'),
 		requireConfig = null,
 		albanilConfig = null;
 
@@ -9,14 +10,14 @@ module.exports.build = function(config) {
 	logger.setWarningsHeader('Warnings: \n');
 	logger.setSuccessHeader('Successes: \n');
 
-	console.log('\n\n>>>>>>>>>>>>>>>>>>> Reading configuration... \n');
+	console.log(chalk.cyan('\n\n>>>>>>>>>>>>>>>>>>> Reading configuration... \n'));
 	albanilConfig = helpers.configurationHandler(config, logger);
 	console.log(logger.getLogText());
 
 	requireConfig = module.exports.getRequireConfig(albanilConfig);
 
 	if (logger.getStatus() > 0) {
-		console.log('>>>>>>>>>>>>>>>>>>> Building...');
+		console.log(chalk.cyan('>>>>>>>>>>>>>>>>>>> Building...'));
 		requirejs.optimize(requireConfig, function(result) {
 			console.log(result);
 		});
