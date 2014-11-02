@@ -4,7 +4,7 @@ AlbanilJS
 AlbanilJS is more than a smart concatenator, it's a javascript builder. With AlbanilJS you can modularize your javscript projects using the [RequireJS's syntax](http://requirejs.org/) and use these modules to build a standalone vendor-free javascript file (RequireJS independant!). It works as a concatenator, taking the code of several javascripts files and creating a single file, but it also deals with the modules' dependencies for you. So, for example, if you want to include an specific module in a build, you don't have to worry any more to also include all the other modules of which the first module depends on. This is all resolved automagically!
 
 
-Amazing advantges
+Awesome advantges
 -------------
 
 1. AlbanilJS allows you to modularize your code just as you would do with RequireJS. The thing is that, using AlbanilJS, you can build a standalone javascript file from these RequireJS modules, obtaining a single file wich **doesn't depends on RequireJS to work**.

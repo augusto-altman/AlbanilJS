@@ -1,16 +1,4 @@
-;(function(window, document, undefined){
-    function ajaxGet(){
-        console.log("GET!");
-    }
-
-    function ajaxPost(){
-        console.log("POST!");
-    }
-
-    var a_ = {};
-
-    
-
+define(["ajaxGet", "../utils/ajaxPost", "../vars/a_"], function(ajaxGet, ajaxPost, a_) {
     //Independant code code code
     function callXApi(){
         //Independant code code code
@@ -23,10 +11,5 @@
 
     a_.callX = callXApi;
 
-    
-
-    window.A = a_;
-
-
-
-})(this, document);
+    return callXApi;
+});

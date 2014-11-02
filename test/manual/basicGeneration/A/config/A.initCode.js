@@ -1,1 +1,0 @@
-    window.A = a_;

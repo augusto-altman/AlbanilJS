@@ -1,5 +1,5 @@
 define([
-    "../utils/ajaxGet", //aksjkasjas
+    "ajaxGet", //aksjkasjas
     "../vars/a_"
     ], function(ajaxGet, a_) { //skjaks
     //Independant code code code

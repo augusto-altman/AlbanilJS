@@ -1,5 +1,6 @@
 module.exports = (function() {
-	var strings = require('./strings');
+	var strings = require('./strings'),
+		helpers = require('./helpers');
 
 	return {
 		build: function(config) {
@@ -33,6 +34,7 @@ module.exports = (function() {
 				beautify = require('js-beautify').js_beautify,
 				rjsConfig = {
 					baseUrl: config.srcFolder,
+					paths: helpers.getRequireJSPathsFromDir(config.srcFolder),
 					include: config.include,
 					optimize: 'none',
 					skipSemiColonInsertion: true,

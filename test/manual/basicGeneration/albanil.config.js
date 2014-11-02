@@ -1,14 +1,14 @@
 module.exports = function(albanil, args) {
 	albanil.build({
-		srcFolder: '.',
+		srcFolder: './src',
 		outFile: './out.js',
 		object: {
 			name: 'cuak',
 			expositorModule: 'a'
 		},
 		include: [
-			'A/src/restCommunication/callXAPi',
-			'A/src/restCommunication/callYAPi'
+			'restCommunication/callXAPi',
+			'restCommunication/callYAPi'
 		]
 	});
 }
