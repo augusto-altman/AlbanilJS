@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 File builded with AlbanilJS
 github: https://github.com/augusto-altman/AlbanilJS
-npm: - 
+npm: https://www.npmjs.org/package/albaniljs 
 -------------------------------------------------------*/
 
 var cuak = (function() {

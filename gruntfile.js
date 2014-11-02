@@ -35,6 +35,12 @@ module.exports = function(grunt) {
 				}, {
 					src: 'src/lib/logger.js',
 					dest: 'dist/lib/logger.js'
+				}, {
+					src: 'src/lib/configurator.js',
+					dest: 'dist/lib/configurator.js'
+				}, {
+					src: 'src/lib/strings.js',
+					dest: 'dist/lib/strings.js'
 				}]
 			}
 		},
