@@ -3,6 +3,7 @@ module.exports = (function() {
 	var path = require('path'),
 		fs = require('fs'),
 		helpers = require('./helpers'),
+		strings = require('./strings'),
 		logger = {
 			loggerMachine: null,
 			setNative: function(log) {
@@ -34,7 +35,7 @@ module.exports = (function() {
 		},
 		forConfig: function(config) {
 			if (!helpers.isObject(config)) {
-				log('warning', 'The configuration must be specified in an object. The default config will be set.');
+				log('warning', strings.messages.logger.warnings.defaultConfigActivated);
 				return {};
 			} else {
 				return config;
@@ -43,23 +44,23 @@ module.exports = (function() {
 		srcFolder: function(srcFolderProp) {
 			if (helpers.isString(srcFolderProp)) {
 				if (fs.existsSync(path.resolve(process.cwd(), path.normalize(srcFolderProp)))) {
-					log('success', 'The srcFolder property is correct.');
+					log('success', strings.messages.logger.successes.srcFolderOk);
 					return srcFolderProp;
 				} else {
-					log('error', 'The srcFolder property has specified a folder that does not exist: ' + srcFolderProp);
+					log('error', strings.messages.logger.errors.inexistantSrcFolder + srcFolderProp);
 					return '.';
 				}
 			} else {
-				log('warning', 'The srcFolder property must be set and must be a string. By default it is set to "/." .');
+				log('warning', strings.messages.logger.warnings.defaultSrcFolderActivated);
 				return '.';
 			}
 		},
 		include: function(includeProp) {
 			if (!helpers.isArray(includeProp)) {
-				log('warning', 'The include property must be specified in an array. By default it is set to [].');
+				log('warning', strings.messages.logger.warnings.defaultIncludeActivated);
 				return [];
 			} else {
-				log('success', 'The include property is correct.');
+				log('success', strings.messages.logger.successes.includeOk);
 				return includeProp;
 			}
 		},
@@ -67,28 +68,28 @@ module.exports = (function() {
 			var valid = true;
 			if (helpers.isObject(objectProp)) {
 				if (!helpers.isString(objectProp.name)) {
-					log('warning', 'The object.name property must be set and must be a string. This will generate a non-encapsulated build.');
+					log('warning', strings.messages.logger.warnings.badObjectName);
 					valid = false;
 				}
 				if (!helpers.isString(objectProp.expositorModule)) {
-					log('warning', 'The object.expositorModule property must be set and must be a string. This will generate a non-encapsulated build.');
+					log('warning', strings.messages.logger.warnings.badExpositorModule);
 					valid = false;
 				}
 				if (valid) {
-					log('success', 'The object property is correct.');
+					log('success', strings.messages.logger.successes.objectPropertyOk);
 					return objectProp;
 				}
 			} else {
-				log('warning', 'The object property is not properly set. This will generate a non-encapsulated build.');
+				log('warning', strings.messages.logger.warnings.noObjectProperty);
 				return null;
 			}
 		},
 		outFile: function(outFileProp) {
 			if (helpers.isString(outFileProp)) {
-				log('success', 'The outFile property is correct.');
+				log('success', strings.messages.logger.successes.outFileOk);
 				return outFileProp;
 			} else {
-				log('error', 'The outFile property must be set and must be a string.');
+				log('error', strings.messages.logger.errors.badOutFile);
 				return 'albanilOut.js';
 			}
 		}
