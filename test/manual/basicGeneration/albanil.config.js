@@ -4,7 +4,7 @@ module.exports = function(albanil, args) {
 		outFile: './out.js',
 		object: {
 			name: 'cuak',
-			expositorModule: 'a'
+			expositorModule: 'a_'
 		},
 		include: [
 			'restCommunication/callXAPi',

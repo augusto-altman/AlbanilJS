@@ -1,5 +1,5 @@
 /*-------------------------------------------------------
-File builded with AlbanilJS
+File built with AlbanilJS
 github: https://github.com/augusto-altman/AlbanilJS
 npm: https://www.npmjs.org/package/albaniljs 
 -------------------------------------------------------*/
@@ -44,5 +44,5 @@ var cuak = (function() {
         //Independant code code code
 
     a_.callY = callYApi;
-    return a;
+    return a_;
 }());
