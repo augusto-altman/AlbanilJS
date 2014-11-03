@@ -34,7 +34,7 @@ module.exports = (function() {
 			}
 		},
 		albanilBanner: '\n/*-------------------------------------------------------\n' +
-			'File builded with AlbanilJS\n' +
+			'File built with AlbanilJS\n' +
 			'github: https://github.com/augusto-altman/AlbanilJS\n' +
 			'npm: https://www.npmjs.org/package/albaniljs \n' +
 			'-------------------------------------------------------*/\n\n'
