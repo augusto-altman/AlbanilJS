@@ -1,55 +1,59 @@
 {
-	"author": {
-		"name": "Altman Quaranta Augusto",
-		"email": "augusto.altman@gmail.com"
-	},
-	"name": "albaniljs",
-	"description": "AlbanilJS is more than a smart concatenator, it is javascript builder. Modulirize your project and build them with AlbanilJS.",
-	"version": "0.0.2",
-	"repository": {
-		"url": "https://github.com/augusto-altman/AlbanilJS"
-	},
-	"contributors": [{
-		"name": "Matias Carranza",
-		"email": "matiascarranza@gmail.com"
-	}],
-	"keywords": [
-		"modularization",
-		"modules",
-		"compile",
-		"build",
-		"tool",
-		"compiler",
-		"dependencies",
-		"select",
-		"file selection",
-		"modules selection",
-		"build customization",
-		"custom builds",
-		"standalone",
-		"standalone generation",
-		"cutomization",
-		"build tool",
-		"concat",
-		"concatenation"
-	],
-	"main": "./dist/lib/builder.js",
-	"bin": {
-		"albanil": "./dist/bin/albanil"
-	},
-	"dependencies": {
-		"chalk": "^0.5.1",
-		"js-beautify": "latest",
-		"requirejs": "~2.1.4"
-	},
-	"engines": {
-		"node": "*"
-	},
-	"devDependencies": {
-		"grunt": "^0.4.5",
-		"grunt-contrib-copy": "^0.5.0",
-		"grunt-contrib-jshint": "^0.10.0",
-		"grunt-contrib-nodeunit": "^0.4.1"
-	},
-	"license": "MIT"
+  "author": {
+    "name": "Altman Quaranta Augusto",
+    "email": "augusto.altman@gmail.com"
+  },
+  "name": "albaniljs",
+  "description": "AlbanilJS is more than a smart concatenator, it is javascript builder. Modulirize your project and build them with AlbanilJS.",
+  "version": "0.0.3",
+  "repository": {
+    "url": "https://github.com/augusto-altman/AlbanilJS"
+  },
+  "contributors": [
+    {
+      "name": "Matias Carranza",
+      "email": "matiascarranza@gmail.com"
+    }
+  ],
+  "keywords": [
+    "modularization",
+    "modules",
+    "compile",
+    "build",
+    "tool",
+    "compiler",
+    "dependencies",
+    "select",
+    "file selection",
+    "modules selection",
+    "build customization",
+    "custom builds",
+    "standalone",
+    "standalone generation",
+    "cutomization",
+    "build tool",
+    "concat",
+    "concatenation",
+    "concatenator"
+  ],
+  "main": "./dist/lib/builder.js",
+  "bin": {
+    "albanil": "./dist/bin/albanil"
+  },
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "js-beautify": "latest",
+    "requirejs": "~2.1.4",
+    "walk": "^2.3.4"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1"
+  },
+  "license": "MIT"
 }
