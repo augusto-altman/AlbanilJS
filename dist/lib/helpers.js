@@ -27,6 +27,10 @@ module.exports = (function() {
 		return !!array && Object.prototype.toString.call(array) === '[object Array]';
 	}
 
+	function isBoolean(value) {
+		return typeof value === 'boolean';
+	}
+
 	function getRequireJSPathsFromDir(dir) {
 		var walk = require('walk'),
 			path = require('path'),
@@ -37,7 +41,7 @@ module.exports = (function() {
 				listeners: {
 					file: function(root, stat, next) {
 						var fullPath = path.normalize(root + '/' + stat.name);
-							// Add this file to the list of files
+						// Add this file to the list of files
 						if (path.extname(fullPath) === '.js') {
 							files[path.basename(fullPath, '.js')] = path.normalize(path.dirname(fullPath) + '/' + path.basename(fullPath, '.js'));
 						}
@@ -60,6 +64,7 @@ module.exports = (function() {
 		forEach: forEach,
 		isArray: isArray,
 		arrayHasValue: isValueInArray,
-		getRequireJSPathsFromDir: getRequireJSPathsFromDir
+		getRequireJSPathsFromDir: getRequireJSPathsFromDir,
+		isBoolean: isBoolean
 	};
 })();

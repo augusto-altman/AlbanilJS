@@ -25,7 +25,7 @@ module.exports = (function() {
 				console.log(chalk.cyan(strings.messages.stage.build));
 				requirejs.optimize(requireConfig, function(result) {
 					console.log(result);
-					if(typeof callback === 'function') {
+					if (typeof callback === 'function') {
 						callback();
 					}
 				});
@@ -49,13 +49,32 @@ module.exports = (function() {
 						return contents;
 					},
 					out: function(text) {
-						text = strings.albanilBanner + text;
+						var codeParts, splitter = 'var ' + config.object.name + ' = (function() {';
+
+						if(!config.noBanner) {
+							text = strings.albanilBanner + text;
+						}
+
+						text = beautify(text, {
+							indent_size: 4
+						});
+
+						if (!!config.globals && !!config.object) {
+							codeParts = text.split(splitter);
+							text = codeParts[0] + splitter + '\n\r';
+							config.globals.forEach(function(globalPath) {
+								text =  text + fs.readFileSync(globalPath) + '\n\r';
+							});
+							text = text + codeParts[1];
+						} else {
+							config.globals.forEach(function(globalPath) {
+								text =  fs.readFileSync(globalPath) + '\n\r' + text;
+							});
+						}
 
 						fs.writeFileSync(
 							path.normalize(config.outFile),
-							beautify(text, {
-								indent_size: 4
-							}));
+							text);
 					}
 				};
 

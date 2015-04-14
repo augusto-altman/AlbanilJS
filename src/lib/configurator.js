@@ -92,6 +92,22 @@ module.exports = (function() {
 				log('error', strings.messages.logger.errors.badOutFile);
 				return 'albanilOut.js';
 			}
+		},
+		globals: function(globals) {
+			if (helpers.isArray(globals)) {
+				log('success', strings.messages.logger.successes.globalsOk);
+				return globals;
+			} else {
+				return [];
+			}
+		},
+		noBanner: function(value) {
+			if (helpers.isBoolean(value)) {
+				log('success', strings.messages.logger.successes.noBannerOk);
+				return value;
+			} else {
+				return false;
+			}
 		}
 	};
 

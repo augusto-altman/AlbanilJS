@@ -25,7 +25,9 @@ module.exports = (function() {
 					srcFolderOk: 'The srcFolder property is correct.',
 					includeOk: 'The include property is correct.',
 					objectPropertyOk: 'The object property is correct.',
-					outFileOk: 'The outFile property is correct.'
+					outFileOk: 'The outFile property is correct.',
+					globalsOk: 'The globals property is correct.',
+					noBannerOk: 'The noBanner property is correct.'
 				}
 			},
 			stage: {
