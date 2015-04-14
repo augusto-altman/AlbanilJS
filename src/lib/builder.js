@@ -44,7 +44,7 @@ module.exports = (function() {
 					onBuildWrite: function(id, path, contents) {
 						contents = contents.replace(/define\((.|\s)*?\{/, '');
 						contents = contents.replace(/\}\s*\)\s*;*\s*?.*$/, '');
-						contents = contents.replace(/return(.|\s)*[^return]*$/, '');
+						contents = contents.replace(/return.*[^return]*$/, '');
 
 						return contents;
 					},
