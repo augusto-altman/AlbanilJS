@@ -3,7 +3,7 @@ module.exports = (function() {
 		helpers = require('./helpers');
 
 	return {
-		build: function(config) {
+		build: function(config, callback) {
 			var requirejs = require('requirejs'),
 				configurator = require('./configurator'),
 				logger = require('./logger'),
@@ -25,6 +25,9 @@ module.exports = (function() {
 				console.log(chalk.cyan(strings.messages.stage.build));
 				requirejs.optimize(requireConfig, function(result) {
 					console.log(result);
+					if(typeof callback === 'function') {
+						callback();
+					}
 				});
 			}
 		},

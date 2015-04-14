@@ -1,6 +1,8 @@
 AlbanilJS
 =========
 
+![alt tag](https://raw.github.com/augusto-altman/AlbanilJS/master/albanilJS-01.png)
+
 AlbanilJS is more than a smart concatenator, it's a javascript builder. With AlbanilJS you can modularize your javscript projects using the [RequireJS's syntax](http://requirejs.org/) and then use these modules to build a standalone vendor-free javascript file (RequireJS independant!).
 
 It works as a concatenator, taking the code of several javascripts files and creating a new one with all the chunks of code concateneted in some order. The special thing about AlbanilJS is that you have to use RequireJS modules as concatenation sources instead of using regular javascript files. This allows you to explicitly specify dependencies beteween the chunks of code you want to concatenate, which brings you [awesome advatages](#awesome-advantges). At _compilation time_, AlbanilJS will deal with the dependencies for you. So, for example, if you want to include an specific module in a build, you don't have to worry any more to also include before all the other modules of which the first one depends on. This is all resolved automagically! AlbanilJS will use the dependencies that you've specified and will write each module in the concatened file below the modules of which it depends on, so the javascript intepreter will always read the concatened code in the correct order.
@@ -89,6 +91,10 @@ The configuration object is a typical javascript object that looks like:
 	]
 }
 ```
+
+Related information
+-------------
+For more info about the mechanism and examples please check out this [post](http://augustoaltman.tumblr.com/post/103432024045/from-requirejs-modules-to-standalone-javascript).
 
 License
 -------------
