@@ -1,7 +1,7 @@
 AlbanilJS
 =========
 
-![alt tag](https://raw.github.com/augusto-altman/AlbanilJS/master/albanilJS-01.png)
+![alt tag](https://raw.githubusercontent.com/augusto-altman/AlbanilJS/master/albanilJS-01.png)
 
 AlbanilJS takes the idea of file concatenation to another level, providing developers with a great tool for generating their js bundles. We say that it's more than a smart concatenator, it's a javascript builder. With AlbanilJS you can modularize your javscript projects using the [RequireJS's syntax](http://requirejs.org/) and then use those modules to build a standalone vendor-free javascript file (RequireJS independant!).
 
@@ -11,7 +11,7 @@ At the end you will get a clean javascript bundle, and when we say a clean, we r
 
 As it´s commonly said, a picture is worth a thousand words. Below there is a small banner that summarize the AlbanilJS awesomness:
 
-![alt tag](https://raw.github.com/augusto-altman/AlbanilJS/master/docs/banner.png)
+![alt tag](https://raw.githubusercontent.com/augusto-altman/AlbanilJS/master/doc/banner.png)
 
 After using AlbanilJS there is no reason to use a plain file concatenator again!
 
