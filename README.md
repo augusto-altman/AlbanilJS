@@ -103,17 +103,7 @@ Obscure features
 -------------
 There is a beta feature for adding external vendor libraries that supports AMD (in other words that provides the posibility to expose itself to the RequireJS word using the define function). This will enable you to use it from your modules without touching the global namespace (window). For this to work you have to include the library as a regular project's module adding de sufix '.vendor' to the module's file name (before the js extension). Then you could use the vendor library from any other module by adding it as a module's depenency. Keep in mind that you should use it with its real name (without the '.vendor' sufix) from inside the modules. Below is an example of this (using the [Q](https://github.com/kriskowal/q) library for promises that supports AMD):
 
-First rename and relocate the q.js code to _src/libs/q.vendor.js_
-```JavaScript
-//FILE: src/libs/q.vendor.js
-
-/*
-QCODE
-*/
-
-```
-
-Then use it from any regular module:
+First rename and relocate the q.js code to _src/libs/q.vendor.js_. Then use it from any regular module:
 ```JavaScript
 //FILE: src/helpers/ajax.js
 
