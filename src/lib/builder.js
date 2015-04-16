@@ -47,7 +47,7 @@ module.exports = (function() {
 								vendorName = id.replace('.vendor', '');
 							temp += 'var ' + vendorName + ';\n\r';
 							temp += '(function(){\n\r';
-							temp += 'function define(modN, modF){if(!modF){modF=modN} ' + vendorName + ' = modF();}\n\r';
+							temp += 'function define(modN, modF){if(!modF){modF=modN;} ' + vendorName + ' = modF();}\n\r';
 							temp += 'define.amd = {}; \n\r';
 							contents = temp + contents + '})();\n\r';
 						} else {
