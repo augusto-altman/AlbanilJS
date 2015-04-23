@@ -49,6 +49,7 @@ module.exports = (function() {
 							temp += '(function(){\n\r';
 							temp += 'function define(modN, modF){if(!modF){modF=modN;} ' + vendorName + ' = (typeof modF === \'function\') ? modF() : modF;}\n\r';
 							temp += 'define.amd = {}; \n\r';
+							temp += 'var module; \n\r';
 							contents = temp + contents + '})();\n\r';
 						} else {
 							contents = contents.replace(/define\((.|\s)*?\{/, '');
