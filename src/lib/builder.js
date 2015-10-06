@@ -37,7 +37,7 @@ module.exports = (function() {
 				beautify = require('js-beautify').js_beautify,
 				rjsConfig = {
 					baseUrl: config.srcFolder,
-					paths: helpers.getRequireJSPathsFromDir(config.srcFolder),
+					paths: helpers.getRequireJSPathsFromDir(config.srcFolder, config.overridePaths),
 					include: config.include,
 					optimize: 'none',
 					skipSemiColonInsertion: true,

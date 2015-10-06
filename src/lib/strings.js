@@ -27,7 +27,8 @@ module.exports = (function() {
 					objectPropertyOk: 'The object property is correct.',
 					outFileOk: 'The outFile property is correct.',
 					globalsOk: 'The globals property is correct.',
-					noBannerOk: 'The noBanner property is correct.'
+					noBannerOk: 'The noBanner property is correct.',
+					overridePathsOk: 'The overridePaths property is correct.'
 				}
 			},
 			stage: {

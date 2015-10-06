@@ -31,7 +31,7 @@ module.exports = (function() {
 		return typeof value === 'boolean';
 	}
 
-	function getRequireJSPathsFromDir(dir) {
+	function getRequireJSPathsFromDir(dir, override) {
 		var walk = require('walk'),
 			path = require('path'),
 			files = {},
@@ -54,6 +54,14 @@ module.exports = (function() {
 			};
 
 		walk.walkSync(path.resolve(process.cwd(), path.normalize(dir)), options);
+
+		if (typeof override === 'object') {
+			for (var index in override) {
+				if (override.hasOwnProperty(index)) {
+					files[index] = override[index];
+				}
+			}
+		}
 
 		return files;
 	}

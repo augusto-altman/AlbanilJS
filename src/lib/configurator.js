@@ -108,6 +108,14 @@ module.exports = (function() {
 			} else {
 				return false;
 			}
+		},
+		overridePaths: function(value) {
+			if (helpers.isObject(value)) {
+				log('success', strings.messages.logger.successes.overridePathsOk);
+				return value;
+			} else {
+				return {};
+			}
 		}
 	};
 
