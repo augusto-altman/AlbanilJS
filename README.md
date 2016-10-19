@@ -1,3 +1,9 @@
+[![Travis](https://img.shields.io/travis/augusto-altman/AlbanilJS.svg?style=flat-square)](https://travis-ci.org/augusto-altman/AlbanilJS)
+[![npm](https://img.shields.io/npm/v/albaniljs.svg?style=flat-square)](https://www.npmjs.com/package/albaniljs)
+[![npm](https://img.shields.io/npm/dt/albaniljs.svg?maxAge=2592000)](https://www.npmjs.com/package/albaniljs)
+[![npm](https://img.shields.io/npm/l/albaniljs.svg?style=flat-square)](https://www.npmjs.com/package/albaniljs)
+[![David](https://img.shields.io/david/augusto-altman/AlbanilJS.svg?style=flat-square)](https://www.npmjs.com/package/albaniljs)
+
 AlbanilJS
 =========
 
