@@ -41,7 +41,7 @@
     "albanil": "./dist/bin/albanil"
   },
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^1.0.0",
     "js-beautify": "latest",
     "requirejs": "~2.1.4",
     "walk": "^2.3.4"
